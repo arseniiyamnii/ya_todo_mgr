@@ -1,4 +1,20 @@
 # Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html
+#fos_rest:
+#    routing_loader:
+#        default_format: json
+#        include_format: false
+#    body_listener: true
+#    format_listener:
+#          rules:
+#              - { path: '^/', priorities: ['json'], fallback_format: json, prefer_extension: false }
+#    param_fetcher_listener: true
+#    access_denied_listener:
+#        json: true
+#    view:
+#        view_response_listener: 'force'
+#        formats:
+#            json: true
+# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html
 fos_rest: null
 #    param_fetcher_listener:  true
 #    allowed_methods_listener:  true
@@ -13,3 +29,16 @@ fos_rest: null
 #    format_listener:
 #        rules:
 #            - { path: ^/api, prefer_extension: true, fallback_format: json, priorities: [ json, html ] }
+#fos_rest: null
+#    routing_loader:
+#        default_format: html
+#        include_format: true
+#
+#    format_listener:
+#        enabled: true
+#        rules:
+#             - { path: '^/api', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: false }
+#             - { path: '^/', priorities: ['html'], fallback_format: html, prefer_extension: false }
+#
+#    view:
+#        view_response_listener: true
